@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="forms.css">
+    <script>
+
+        // Update
+        function updateExperience(val) {
+            document.getElementById('experienceValue').textContent = val;
+        }
+
+        // Prev
+        function previewApplication() {
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const position = document.getElementById('position').value;
+            const experience = document.getElementById('experience').value;
+            alert(`Preview:\nName: ${fullname}\nEmail: ${email}\nPosition: ${position}\nExperience: ${experience} years`);
+        }
+
+        // Save
+        function saveDraft() {
+            alert("Draft saved! (Functionality can be implemented later)");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="watermark">© Jessa Mae Forrosuelo</div>
+    <form action="#" method="post" autocomplete="on" target="_self">
+
+        <h1>Job Application Form</h1>
+
+        <!-- Personal Info -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="50">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="60" required>
+
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </fieldset>
+
+        <!-- Acc Details -->
+        <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="applicant01" readonly>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="position">Position Applying For:</label>
+            <select id="position" name="position" required>
+                <option value="">-- Select Position --</option>
+                <option value="developer">Web Developer</option>
+                <option value="designer">UI/UX Designer</option>
+                <option value="support">IT Support</option>
+                <option value="Manager">Project Manager</option>
+                <option value="Analyst">Business Analyst</option>
+                <option value="Tester">Quality Assurance Tester</option>
+            </select>
+        </fieldset>
+
+        <!-- Pref -->
+        <fieldset>
+            <legend>Preferences</legend>
+            <label>Employment Type:</label>
+            <input type="radio" id="fulltime" name="employment" value="fulltime" checked>
+            <label for="fulltime">Full-time</label>
+            <input type="radio" id="parttime" name="employment" value="parttime">
+            <label for="parttime">Part-time</label>
+
+            <label>Skills:</label>
+            <input type="checkbox" id="html" name="skills" value="html" checked>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="javascript" name="skills" value="javascript">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" id="react" name="skills" value="react">
+            <label for="react">React</label>
+            <input type="checkbox" id="node" name="skills" value="node">
+            <label for="node">Node.js</label>
+            <input type="checkbox" id="networking" name="skills" value="networking">
+            <label for="networking">Networking Basics</label>
+            <input type="checkbox" id="troubleshooting" name="skills" value="troubleshooting">
+            <label for="troubleshooting">Troubleshooting</label>
+            <input type="checkbox" id="computer-fundamentals" name="skills" value="computer-fundamentals">
+            <label for="computer-fundamentals">Computer Fundamentals</label>
+
+            <label for="experience">
+                Years of Experience:
+                <strong><span id="experienceValue">0</span> years</strong>
+            </label>
+            <input type="range" id="experience" name="experience" min="0" max="10" value="0" oninput="updateExperience(this.value)">
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="about">Tell us about yourself:</label>
+            <textarea id="about" name="about" placeholder="Write a short introduction..." rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>File Upload</legend>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Actions</legend>
+            <button type="button" class="register btn"
+        onclick="window.location.href='login.html'">
+    Register
+</button>
+
+            <button type="submit" class="submit btn">Submit Application</button>
+            <button type="reset" class=" reset btn">Reset Form</button>
+            <button type="button" class=" draft btn" onclick="saveDraft()">Save Draft</button>
+            <button type="button" class=" preview btn" onclick="previewApplication()">Preview</button>
+            <button type="button" class="print btn" onclick="window.print()">Print Form</button>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
