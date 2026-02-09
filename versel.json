@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/IT9a%20(Sem).html" },
-    { "source": "/(.*)", "destination": "/IT9a%20(Sem).html" }
+    { "source": "/", "destination": "/forrosuelo_landingpage.html" }
   ]
 }
