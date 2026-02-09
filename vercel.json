@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/forrosuelo_landingpage.html" }
+  ]
+}
