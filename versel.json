@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/forrosuelo_landingpage.html" }
+    { 
+      "source": "/", 
+      "destination": "/forrosuelo_landingpage.html" 
+    },
+    { 
+      "source": "/index", 
+      "destination": "/forrosuelo_landingpage.html" 
+    }
   ]
 }
